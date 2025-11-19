@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <DatabaseFilePath>CodingTracker.db</DatabaseFilePath>
+    <DefaultReportYear>2025</DefaultReportYear>
+    <DefaultReportMonth>1</DefaultReportMonth>
+    <StopwatchInterval>1000</StopwatchInterval>
+</Configuration>
