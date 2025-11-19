@@ -1,0 +1,30 @@
+This File is planning phase on how to build the project.
+
+Main Menu
+1.View coding session/Generate Report 
+2.Add Session 
+3.Update Session 
+4.Delete Coding Session
+
+Generate Report/View Coding session 
+1.ask year
+2.ask month
+3.1 generate report
+3.2 show all coding sessions for that month year
+
+Add Session 
+1.1 manually add based on start and end time and date 
+1.2 Start a Stop watch.
+
+Delete Coding session
+1.show a list of years 
+2.choose month 
+3.print all for that year and month 
+4.prompt delete by id
+
+Steps to build the project
+
+Task 1: Build Menu Logic
+
+Task 2: Create classes/Models
+
