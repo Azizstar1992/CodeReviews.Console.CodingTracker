@@ -14,7 +14,7 @@ internal class SessionMenuUI
 
     public void ShowByMonth(string action)
     {
-        // 1. Traverse year/month and get sessions
+
         int year, month;
         var sessions = GetSessionsForYearMonth(out year, out month);
 
