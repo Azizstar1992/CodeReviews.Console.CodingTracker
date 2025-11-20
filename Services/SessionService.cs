@@ -1,4 +1,3 @@
-
 using CodingTracker.Models;
 using CodingTracker.Services;
 
@@ -23,18 +22,16 @@ internal class SessionService : ISessionService
 
     public void UpdateSession(int id, DateTime newStart, DateTime newEnd)
     {
-        _repository.Update(id,newStart,newEnd);
+        _repository.Update(id, newStart, newEnd);
     }
 
     public void DeleteSession(int id)
     {
-       _repository.Delete(id);
+        _repository.Delete(id);
     }
 
     public List<CodingSession> GetSessionsByMonth(int year, int month)
-{
-    return _repository.GetByMonth(year, month);
-}
-
-
+    {
+        return _repository.GetByMonth(year, month);
+    }
 }

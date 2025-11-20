@@ -90,10 +90,6 @@ internal class SessionMenuUI
             .AddChoices(sessions.Select(s => s.Id))
     );
 
-        
-        var session = sessions.First(s => s.Id == id);
-
-        
         DateTime newStart;
         while (true)
         {

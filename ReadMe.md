@@ -1,15 +1,18 @@
-This is a Coding Tracking Application.
+# This is a Coding Tracking Application
 
-you have menu choices of viewing your monthly report.
+## You have menu choices for viewing your monthly reports
 
-1. view monthly report, you scroll to the month you have data in and a report will be generated
+1. View monthly report — scroll to a month with data, and a report will be 
+   generated.
 
-2. view session: you will be able to scroll to the month you have data in an see the list of inputs you have
+2. View sessions — scroll to the month you have data in and see the list of 
+   inputs you have.
 
-3.add session
-3.1 a stop watch with a console timer
-3.2 manually add by using start and end time 
+3. Add session — use a stopwatch with a live console timer, or manually add 
+   a session by entering start and end times.
 
-4.you can scroll the month you want, select id then prompted what times you want it updated to
+4. Update session — scroll to the month you want, select an ID, and you will 
+   be prompted to enter the updated times.
 
-5. simply find by year and month, select by id which input you want to delete.
+5. Delete session — find entries by year and month, then select an ID to 
+   delete the input.
