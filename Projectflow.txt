@@ -22,9 +22,8 @@ Delete Coding session
 3.print all for that year and month 
 4.prompt delete by id
 
-Steps to build the project
-
-Task 1: Build Menu Logic
-
-Task 2: Create classes/Models
+3 layers 
+Layer 1 is UI layers: UI folder
+Layer 2 business logic: Services folder
+Layer 3 database interaction : Data Folder
 
