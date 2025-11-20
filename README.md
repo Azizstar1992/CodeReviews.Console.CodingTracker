@@ -1,8 +1,7 @@
-
 # This is a Coding Tracking Application
-
-## You have menu choices for viewing your monthly reports
-
-A scroll based menu option with timer capablities.
-to access stop watch, its the first choice of add session.
-you have the capability to update and delete past and future entries
+Menu choices for viewing monthly reports
+View monthly report — scroll to a month with data to generate a report.
+View sessions — scroll to the month you have data in and see the list of inputs.
+Add session — use a stopwatch with a live console timer, or manually add a session by entering start and end times.
+Update session — scroll to the month, select an ID, and enter the updated times.
+Delete session — find entries by year and month, then select an ID to delete the input.
