@@ -29,7 +29,7 @@ internal class SessionMenuUI
 
 
 
-        // 3. Branch by action
+        
         switch (action.ToLower())
         {
             case "show":
@@ -57,12 +57,12 @@ internal class SessionMenuUI
 
 
 
-        // 5. Wait for key to return
+       
         AnsiConsole.MarkupLine("\n[grey]Press any key to return...[/]");
         Console.ReadKey(true);
     }
 
-    // ---------------- Helper Methods ----------------
+    
 
     private List<CodingSession> GetSessionsForYearMonth(out int year, out int month)
     {
@@ -90,10 +90,10 @@ internal class SessionMenuUI
             .AddChoices(sessions.Select(s => s.Id))
     );
 
-        // Find the session
+        
         var session = sessions.First(s => s.Id == id);
 
-        // Prompt for new start time
+        
         DateTime newStart;
         while (true)
         {
@@ -122,7 +122,7 @@ internal class SessionMenuUI
 
     private void DeleteSessions(List<CodingSession> sessions)
     {
-        // Example: prompt for ID to delete, then call _service.DeleteSession(...)
+        
 
         int id = AnsiConsole.Prompt(
         new SelectionPrompt<int>()
@@ -215,7 +215,7 @@ internal class SessionMenuUI
         }
         else
         {
-            // Manual entry
+            
             startTime = PromptForDateTime("Enter start time (dd-MM-yy HH:mm):");
             while (true)
             {
@@ -225,7 +225,7 @@ internal class SessionMenuUI
             }
         }
 
-        // Create session object
+        
         var session = new CodingSession(0, startTime, endTime); // Id will be auto-assigned in DB
         _service.AddSession(session);
         AnsiConsole.MarkupLine("[green]Session added successfully![/]");

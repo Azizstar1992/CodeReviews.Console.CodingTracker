@@ -1,5 +1,5 @@
 using Spectre.Console;
-using Microsoft.Data.Sqlite;
+
 internal class UserInterface
 {
     internal static void MainMenu()

@@ -9,8 +9,8 @@ public class CodingSession
 
     public int Duration => (int)(EndTime - StartTime).TotalSeconds;
 
-    // Parameterless constructor for Dapper
-    public CodingSession() { }
+    
+   
 
     public CodingSession(int id, DateTime start, DateTime end)
     {
