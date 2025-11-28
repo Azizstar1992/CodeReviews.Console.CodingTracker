@@ -9,7 +9,7 @@ public class CodingSession
 
     public int Duration => (int)(EndTime - StartTime).TotalSeconds;
 
-    
+    public CodingSession(){}
    
 
     public CodingSession(int id, DateTime start, DateTime end)

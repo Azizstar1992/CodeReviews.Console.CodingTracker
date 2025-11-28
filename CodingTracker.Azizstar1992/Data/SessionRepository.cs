@@ -51,7 +51,7 @@ internal class SessionRepository : ISessionRepository
         });
     }
 
-    public void Update(int id, DateTime newStart, DateTime newEnd)
+    public bool Update(int id, DateTime newStart, DateTime newEnd)
     {
         using var conn = Database.CreateConnection();
 
@@ -62,19 +62,19 @@ internal class SessionRepository : ISessionRepository
             WHERE Id = @id;
         ";
 
-        conn.Execute(sql, new { id, newStart, newEnd });
+        var rowsAffected = conn.Execute(sql, new { id, newStart, newEnd });
+        return rowsAffected > 0;
+
     }
 
-    public void Delete(int id)
+    public bool Delete(int id)
     {
         using var conn = Database.CreateConnection();
 
-        var sql = @"
-            DELETE FROM CodingSessions
-            WHERE Id = @id;
-        ";
+        var sql = @"DELETE FROM CodingSessions WHERE Id = @id;";
 
-        conn.Execute(sql, new { id });
+        var rowsAffected = conn.Execute(sql, new { id });
+        return rowsAffected > 0;
     }
 
     public List<CodingSession> GetByMonth(int year, int month)
@@ -93,5 +93,18 @@ internal class SessionRepository : ISessionRepository
             year = year.ToString("D4"),
             month = month.ToString("D2")
         })];
+    }
+    public bool Exists(int id)
+    {
+        using var conn = Database.CreateConnection();
+
+        var sql = @"
+        SELECT 1
+        FROM CodingSessions
+        WHERE Id = @id
+        LIMIT 1;
+    ";
+
+        return conn.QueryFirstOrDefault<int?>(sql, new { id }) != null;
     }
 }

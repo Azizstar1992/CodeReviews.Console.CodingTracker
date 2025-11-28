@@ -20,18 +20,31 @@ internal class SessionService : ISessionService
         _repository.Insert(session);
     }
 
-    public void UpdateSession(int id, DateTime newStart, DateTime newEnd)
+    public bool UpdateSession(int id, DateTime newStart, DateTime newEnd)
     {
-        _repository.Update(id, newStart, newEnd);
+        return _repository.Update(id, newStart, newEnd);
     }
-
-    public void DeleteSession(int id)
+    public bool DeleteSession(int id)
     {
-        _repository.Delete(id);
+        if (!SessionExists(id)) return false;
+
+        return _repository.Delete(id);
+        
     }
 
     public List<CodingSession> GetSessionsByMonth(int year, int month)
     {
         return _repository.GetByMonth(year, month);
     }
+
+    public bool ValidateTimes(DateTime start, DateTime end)
+    {
+        return end >= start;
+    }
+
+    public bool SessionExists(int id)
+    {
+        return _repository.Exists(id);
+    }
+
 }
