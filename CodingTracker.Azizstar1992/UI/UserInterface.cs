@@ -1,6 +1,7 @@
 using Spectre.Console;
 using CodingTracker.Models;
 using CodingTracker.Services;
+using CodingTracker.Data;
 
 internal class UserInterface
 {
@@ -13,6 +14,7 @@ internal class UserInterface
 
     public void MainMenu()
     {
+        DatabaseInitializer.Initialize();
         bool running = true;
 
         while (running)

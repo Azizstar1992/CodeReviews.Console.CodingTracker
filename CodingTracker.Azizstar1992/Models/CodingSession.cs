@@ -11,7 +11,6 @@ public class CodingSession
 
     public CodingSession(){}
    
-
     public CodingSession(int id, DateTime start, DateTime end)
     {
         Id = id;
